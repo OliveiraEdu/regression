@@ -6,11 +6,11 @@ y = rand(1,4).'
 
 step1 = x.'*x
 
-#Sums of products between each independente variabile in turn and the dependent variable
+%Sums of products between each independente variabile in turn and the dependent variable
 step2 = x.'*y
 step3 = (x.'*x)^-1
 
-#Normal Equation
+%Normal Equation
 betaHat = (x.'*x)^-1*(x.'*y)
 
 clf reset
@@ -27,4 +27,4 @@ plot(x,z)
 
 hold
 
-legend("modelo","dados")
+legend("model","random data")
