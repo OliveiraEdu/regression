@@ -1,12 +1,18 @@
 clear all;clc;
 
-x = [1,1;1,2;1,3;1,4]
+n = 10
+
+t = ones(1,n).'
+u = (1:n).'
+x = [t u]
 
 %y = (2*x+1) 
 
 %y = y(:,2)
 
-y = rand(1,4).'
+
+
+y = rand(1,length(x)).'
 
 step1 = x.'*x
 
@@ -19,7 +25,8 @@ betaHat = (x.'*x)^-1*(x.'*y)
 
 clf reset
 
-plot (x,y)
+%plot (x,y)
+scatter(x(:,2),y)
 
 hold on
 
@@ -29,7 +36,7 @@ plot(x,z)
 
 hold
 
-legend("model","random data")
+%legend("random data","model")
 
 %Residual
 
